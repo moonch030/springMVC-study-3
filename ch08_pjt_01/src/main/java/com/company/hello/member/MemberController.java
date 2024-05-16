@@ -34,14 +34,20 @@ public class MemberController {
 	}
 	
 	
-	@RequestMapping("/signup")
+	@RequestMapping("/signUp")
 	public String signup() {
 		return "sign_up";
 	}
 	
-	@RequestMapping("/signin")
+	@RequestMapping("/signIn")
 	public String signin() {
 		return "sign_in";
+	}
+	
+	@RequestMapping("/signUpConfirm")
+	public String signUpConfirm() {
+		System.out.println("signUpConfirm 호출");
+		return "result";
 	}
 
 }
