@@ -7,7 +7,7 @@
 </head>
 <body>
 <h1>
-	Member Managing~~~~~~~~~~~~
+	안녕하세요
 </h1>
 
 <P>  The time on the server is ${serverTime}. </P>
