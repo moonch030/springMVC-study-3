@@ -45,8 +45,12 @@ public class MemberController {
 	}
 	
 	@RequestMapping("/signUpConfirm")
-	public String signUpConfirm() {
-		System.out.println("signUpConfirm 호출");
+	public String signUpConfirm(MemberVo memberVo) {
+		System.out.println("signUpConfirm() 메서드 호출");
+		System.out.println("입력한 id = "+memberVo.getM_id());
+		System.out.println("입력한 pw = "+memberVo.getM_pw());
+		System.out.println("입력한 mail = "+memberVo.getM_mail());
+		System.out.println("입력한 phone = "+memberVo.getM_phone());
 		return "result";
 	}
 
