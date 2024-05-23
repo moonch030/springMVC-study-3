@@ -51,7 +51,8 @@ public class MemberController {
 	MemberService memberService;
 	
 	 // MemberVo 객체 사용 
-	 @RequestMapping("/signUpConfirm") public String signUpConfirm(MemberVo memberVo) { 
+	 @RequestMapping("/signUpConfirm") 
+	 public String signUpConfirm(MemberVo memberVo) { 
 		 System.out.println("--MemberController signUpConfirm() 메서드 호출--");
 		 
 		 System.out.println("입력한 id = "+memberVo.getM_id());

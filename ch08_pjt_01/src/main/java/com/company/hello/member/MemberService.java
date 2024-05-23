@@ -2,7 +2,6 @@ package com.company.hello.member;
 
 public class MemberService {
 	
-	
 	public int signUpConfirm(MemberVo memberVo) {
 		 System.out.println("--MemberService signUpConfirm() 메서드 호출--");
 		 System.out.println("inserted 아이디=" +
