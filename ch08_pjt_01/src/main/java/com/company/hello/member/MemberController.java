@@ -47,7 +47,7 @@ public class MemberController {
 	
 	
 	//MemberService 자바 빈 객체(servlet-context.xml에서 <beans:bean id="memberService" class="com.company.hello.member.MemberService"/> 설정 해줌)
-	@Autowired //의존관계 자동 주입
+	@Autowired //xml 빈 객체 사용시 의존관계 자동 주입 , @Service 어노테이션 사용 시(memberservice 객체가 자동 주입)
 	MemberService memberService;
 	
 	 // MemberVo 객체 사용 
@@ -77,5 +77,18 @@ public class MemberController {
 //		System.out.println("입력한 phone = " + m_phone);
 //		return "result";
 //	}
+	 
+		
+		@RequestMapping("/signInConfirm")
+		public String signInConfirm(MemberVo memberVo) {
+			System.out.println("--MemberController signInConfirm() 메서드 호출--");
+			 
+			System.out.println("전달된 id = "+memberVo.getM_id());
+			System.out.println("전달된 pw = "+memberVo.getM_pw());
+
+			memberService.signInConfirm(memberVo);
+			
+			 return null; 
+		}
 
 }

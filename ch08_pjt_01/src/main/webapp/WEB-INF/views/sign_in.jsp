@@ -7,13 +7,12 @@
 <title>sign in</title>
 </head>
 <body>
-	<form action="" method="get">
-	    ID : <input type="text" name="m_id" ><br />  
-	    PW : <input type="password" name="m_pw" ><br />  
-	    MAIL : <input type="text" name="m_mail" ><br />  
-	    PHONE : <input type="text" name="m_phone"><br />  
-	    <input type="submit" value="SIGN UP" >  
-	    <input type="reset" value="CANCEL" >  
-	</form>
+<h1>sign_in.jsp</h1>
+	<form action="/member/signInConfirm">
+      ID : <input type="text" name="m_id" ><br/>  
+      PW : <input type="password" name="m_pw" ><br/>  
+      <input type="submit" value="SIGN IN">  
+      <input type="reset" value="CANCEL">  
+   </form>
 </body>
 </html>

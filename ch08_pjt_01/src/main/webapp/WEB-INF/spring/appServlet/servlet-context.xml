@@ -23,6 +23,7 @@
 	
 	<context:component-scan base-package="com.company.hello.member"/>
 	
+	<!-- MemberService에서 @Service 어노테이션 사용하면 이건 필요 없음 -->
 <!-- 	<beans:bean id="memberService" 
       class="com.company.hello.member.MemberService"/> -->
 	
