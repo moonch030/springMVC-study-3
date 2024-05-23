@@ -29,14 +29,14 @@ public class MemberService {
 	
 	
 	
-	public String signInConfirm(MemberVo memberVo) {		
+	public MemberVo signInConfirm(MemberVo memberVo) {		
 		System.out.println("-- MemberService의 signInConfirm() 메서드 호출 --");
 		
 		System.out.println("전송된 id = "+memberVo.getM_id());
 		System.out.println("전송된 pw = "+memberVo.getM_pw());
 		
+		MemberVo loginedMem = memberDao.selectMember(memberVo);
 		
-		
-		return null;
+		return loginedMem;
 	}
 }

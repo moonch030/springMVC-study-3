@@ -86,9 +86,12 @@ public class MemberController {
 			System.out.println("전달된 id = "+memberVo.getM_id());
 			System.out.println("전달된 pw = "+memberVo.getM_pw());
 
-			memberService.signInConfirm(memberVo);
+			MemberVo signedmem = memberService.signInConfirm(memberVo);
 			
-			 return null; 
+			if(signedmem != null)
+				return "signin_ok";
+			else				
+			 	return "signin_ng";
 		}
 
 }

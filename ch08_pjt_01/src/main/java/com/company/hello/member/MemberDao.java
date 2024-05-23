@@ -12,6 +12,20 @@ public class MemberDao {
 
 	Map<String, MemberVo> memberDB = new HashMap<String, MemberVo>();
 	
+	public MemberVo selectMember(MemberVo memberVo) {
+		System.out.println("-- MemberDao의 selectMember메서드 호출됨 --");
+		System.out.println("전송된 id = "+memberVo.getM_id());
+		System.out.println("전송된 pw = "+memberVo.getM_pw());
+		
+		MemberVo signedMember = memberDB.get(memberVo.getM_id());
+		
+		if(signedMember != null && memberVo.getM_pw().equals(signedMember.getM_pw()))
+			return signedMember;
+		else
+			return null;
+	}
+	
+	
 	public void insertMember(MemberVo memberVo) {
 		System.out.println("-- MemberDao의 insertMember() 호출됨 --");
 		System.out.println("전달된 ID = "+memberVo.getM_id());
