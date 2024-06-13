@@ -26,8 +26,11 @@ public class AdminMemberController {
 	@PostMapping("/createAccountConfirm")
 	public String createAccountConfirm(AdminMemberVo adminMemberVo) {
 		System.out.println("--- AdminMemberController의 createAccountConfirm() 호출 ---");
-		String nextPage = "admin/member/create_account_ok";
-		adminMemberService.createAccountConfirm(adminMemberVo);
-		return nextPage;
+		int result = adminMemberService.createAccountConfirm(adminMemberVo);
+		
+		if (result <= 0) {
+            return "admin/member/create_account_ng";
+        }
+        return "admin/member/create_account_ok";
 	}
 }
